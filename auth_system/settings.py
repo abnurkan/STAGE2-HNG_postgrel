@@ -22,6 +22,8 @@ if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
 
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
@@ -105,18 +107,33 @@ WSGI_APPLICATION = 'auth_system.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': os.environ.get('ENGINE'),
+#         'HOST': os.environ.get('HOST'),
+#         'NAME': os.environ.get('NAME'),
+#         'USER': os.environ.get('USER'),
+#         'PASSWORD': os.environ.get('PASSWORD'),
+#         'PORT': os.environ.get('PORT'),
+#     }
+# }
+
+
+
+
 DATABASES = {
     'default': {
-        'ENGINE':os.environ["ENGINE"],
-        'HOST':os.environ["HOST"],
-        'NAME':os.environ["NAME"],
-        'USER':os.environ["USER"],
-        'PASSWORD':os.environ["PASSWORD"],
-        'PORT':os.environ["PORT"],
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',
+        'NAME': 'postgres',
+        'USER': 'postgres.ndhwnvbapmermrpkhvmc',
+        'PASSWORD': 'Abnurkan@2020',
+        'PORT': 6543,
         
     } 
     
     }
+
 
 
 
